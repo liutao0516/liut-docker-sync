@@ -24,6 +24,12 @@ jobs:
           docker tag louislam/dockge:latest crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:dockge-latest
           docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:dockge-latest
 
+      - name: Sync nginx
+        run: |
+          docker pull nginx:latest
+          docker tag nginx:latest crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
+          docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
+
       # 以后加新镜像在这下面
       # - name: Sync immich
       #   run: |
