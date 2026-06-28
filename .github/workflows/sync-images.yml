@@ -21,8 +21,14 @@ jobs:
       - name: Sync nginx
         run: |
           docker pull nginx:latest
-          docker tag nginx:latest crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
+          docker tag nginx:latest crpi-t10dpwybj22etm56.cn.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
           docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
+
+      - name: Sync maxkb
+        run: |
+          docker pull 1panel/maxkb
+          docker tag 1panel/maxkb crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:maxkb-latest
+          docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:maxkb-latest
 
       # 以后加新镜像在这下面
       # - name: Sync immich
