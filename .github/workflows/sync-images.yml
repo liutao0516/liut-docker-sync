@@ -21,7 +21,7 @@ jobs:
       - name: Sync nginx
         run: |
           docker pull nginx:latest
-          docker tag nginx:latest crpi-t10dpwybj22etm56.cn.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
+          docker tag nginx:latest crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
           docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:nginx-latest
 
       - name: Sync maxkb
