@@ -12,12 +12,6 @@ jobs:
       - name: Login ACR
         run: echo "${{ secrets.ACR_PASSWORD }}" | docker login -u liutao4866 --password-stdin crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com
 
-      - name: Sync changedetection.io
-        run: |
-          docker pull dgtlmoon/changedetection.io:latest
-          docker tag dgtlmoon/changedetection.io:latest crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:changedetection-latest
-          docker push crpi-t10dpwybj22etm56.cn-hangzhou.personal.cr.aliyuncs.com/liut-2606/liut-docker:changedetection-latest
-
       - name: Sync dockge
         run: |
           docker pull louislam/dockge:latest
